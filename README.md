@@ -14,8 +14,6 @@ clone or download the repository into a suitable position eg your Documents Fold
 3. Click the Run button
 4. Startup Sonic Pi and load the program connect4b.rb file into an empty buffer
 5. Adjust the path to the program windefs.rb in line 3 to match your installation
-<placeholder SP>![spConfig](https://user-images.githubusercontent.com/5587849/138563335-e4b8f2b4-6fc3-41d9-9578-28ba6df08a22.jpg)
-
 6. Make sure that incoming OSC calls are enabled in the Preferences IO tab
 
 ## Operation
@@ -25,9 +23,7 @@ clone or download the repository into a suitable position eg your Documents Fold
     hide the Sonic Pi Screen
 3.  The screen should look like the image below
 
-<startConnect4>![startConnect4s](https://user-images.githubusercontent.com/5587849/138563293-523b1d98-447d-4644-9fcc-b4d38d6cce94.jpg)
-
-
+<placeholder start>
 
 4.  Player 1 adjusts the postion of the "dropper" disk by using the left and right arrowsheads
 5.  When you have selected the postion you wish, press the Drop yellow square
@@ -42,14 +38,11 @@ clone or download the repository into a suitable position eg your Documents Fold
 12. The starting player colour is chosen at random between red and green.
 13. At any time (including before it starts) you can cancel the current game and start another.
 
-<placeholder redwin>![redWin](https://user-images.githubusercontent.com/5587849/138563301-97d2054a-22c4-43e1-bd84-49c85622de9d.jpg)
+<placeholder redwin>
 
+<placehoder greenwin>
 
-<placehoder greenwin>![greenWin](https://user-images.githubusercontent.com/5587849/138563313-4e234ac3-69f3-4b4c-a685-e7a686491f1b.jpg)
-
-
-<placeholder draw>![ItsAdraw](https://user-images.githubusercontent.com/5587849/138563315-544e0a49-3dbd-4965-a411-257d3ef0a079.jpg)
-
+<placeholder draw>
 Note the Sonic Pi prgoram is in two parts, so that the main program can be displayed 
 in a single buffer. The supporeting program windefs.rb contains a series of logical 
 conditions which enable a winning state to be ascertained. This program is run using 
