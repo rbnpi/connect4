@@ -23,7 +23,7 @@ clone or download the repository into a suitable position eg your Documents Fold
     hide the Sonic Pi Screen
 3.  The screen should look like the image below
 
-<placeholder start>
+<img src="assets/startConnect4s.jpg" />
 
 4.  Player 1 adjusts the postion of the "dropper" disk by using the left and right arrowsheads
 5.  When you have selected the postion you wish, press the Drop yellow square
@@ -38,11 +38,12 @@ clone or download the repository into a suitable position eg your Documents Fold
 12. The starting player colour is chosen at random between red and green.
 13. At any time (including before it starts) you can cancel the current game and start another.
 
-<placeholder redwin>
+<img src="assets/redWin.jpg" />
 
-<placehoder greenwin>
+<img src="assets/greenWin.jpg" />
 
-<placeholder draw>
+<placeholder draw><img src="assets/ItsAdraw.jpg" />
+   
 Note the Sonic Pi prgoram is in two parts, so that the main program can be displayed 
 in a single buffer. The supporeting program windefs.rb contains a series of logical 
 conditions which enable a winning state to be ascertained. This program is run using 
