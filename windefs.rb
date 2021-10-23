@@ -1,4 +1,4 @@
-#supporting file for connect4b.rb by Robin Newman, Otc 2021
+#supporting file for connect4b.rb by Robin Newman, Oct 2021
 #activeated by run_file from connect4b.rb
 #each function checks for a range of win conditions
 #p holds "r" or "g", gm is the internal board data array
