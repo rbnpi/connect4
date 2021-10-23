@@ -1,12 +1,12 @@
-#Connect4 for Sonic Pi and TouchOSC
+# Connect4 for Sonic Pi and TouchOSC
 
-##Requirements
+## Requirements
 
 Sonic Pi (v3.0.1 or later supporting OSC calls),
 TouchOSC ( preferrably desktop version) running on the same computer as Sonic Pi
 
 clone or download the repository into a suitable position eg your Documents Folder
-#Setup
+## Setup
 
 1. Load Connect4b.tosc file from your downloads into TouchOSC
 2. Set connection 1 on the connections menu to UDP, Host: localhost,
@@ -16,7 +16,7 @@ clone or download the repository into a suitable position eg your Documents Fold
 5. Adjust the path to the program windefs.rb in line 3 to match your installation
 6. Make sure that incoming OSC calls are enabled in the Preferences IO tab
 
-#Operation
+## Operation
 
 1.  Press the Run button on Sonic Pi
 2.  You can bring the TouchOSC screen to the front, and if you wish,
