@@ -1,9 +1,10 @@
 #Connect4b for TouchOSC and SonicPi by Robin Newman Oct 2021 (two players)
 #adjust path of next file to suit your setup
 
-run_file "~/Documents/SPfromXML/windefs.rb"
+run_file "~/Documents/SPfromXML/windefs.rb" #loads win logic fns
 #Install TouchOSC on same computer as Sonic Pi
 use_osc "localhost",9000
+#can adjust localhost with ip of remote tablet if using touchosc there
 use_osc_logging false
 use_cue_logging false
 use_debug false
@@ -51,7 +52,7 @@ define :cancel do |on| #adjust restart button visibility
 end
 
 define :setup do #initialise items for new game
-  use_random_seed (Time.now.to_i) #reset seed every setup
+  use_random_seed (Time.now.to_i) #reset seed on every setup
   osc "/resultMsg","",0,"00000000"
   osc "/another",0;osc "/restart",0
   set :winFlag,false
@@ -66,7 +67,7 @@ end
 
 setup
 
-define :checkWin do #test logic for a win condition nusing defines in windefs.rb file
+define :checkWin do #test logic for a win condition using defines in windefs.rb file
   result="Draw"
   result="Red Wins!" if(hwin("r",gm) or vwin("r",gm) or dfwin("r",gm) or dbwin("r",gm))
   result="Green Wins!" if(hwin("g",gm) or vwin("g",gm) or dfwin("g",gm) or dbwin("g",gm))
@@ -200,18 +201,18 @@ live_loop :dropDisk do #initiate drop when button pressed
   dr = sync "/osc*/drop"
   if dr[0]>0
     turn=get(:turn) #update turn colour
-    res=dropper get(:dropPos),turn #intiate drop and check if OK (res = true)
+    res=dropper get(:dropPos),turn #initiate drop and check if OK (res = true)
     puts "turns #{get(:numTurns)}" #print turns to log
     #only update if dropper result was true
     set :turn,"g" if (turn=="r" and res)
     set :turn,"r" if (turn=="g" and res)
     gmPrint if res #print local board to log if valid drop
     sleep 0.1
-    updateAimer #updcate dropper colour
+    updateAimer #update dropper colour
   end
 end
 
-live_loop :cancelgame do #deal with cancel button pus => setup for new game
+live_loop :cancelgame do #deal with cancel button push => setup for new game
   use_real_time
   k=sync "/osc*/cancel"
   setup if k[1] > 0
